@@ -29,11 +29,8 @@ The four main elements of the integration are as follows:
     ```
     # ansible.cfg
 
-    plugin: netbox.netbox.nb_inventory
-    validate_certs: False
-    group_by: 
-     - device_roles
-     - sites
+    [defaults]
+    inventory = ./netbox_inv.yml
     ```
 
     ```
