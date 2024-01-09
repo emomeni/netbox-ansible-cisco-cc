@@ -85,7 +85,7 @@ cd netbox-cisco-catalyst-center
 ```
 2. Create and activate Python 3 virtual environment:
 ```
-python3 -m venv .
+python3 -m venv ./venv
 source venv/bin/activate
 ```
 3. Install required Python packages:
@@ -96,6 +96,10 @@ pip install -r requirements.txt
 ```
 export NETBOX_API=<YOUR_NETBOX_URL> (note - must include http:// or https://) 
 export NETBOX_TOKEN==<YOUR_NETBOX_API_TOKEN>
+```
+6. Run a playbook making sure to specify the NetBox dynamic inventory with the `-i` flag. For example:
+```
+ansible-playbook -i netbox_inv.yml get_device_details.yml
 ```
 5. When you have finished working you can deactivate the Python virtual environment:
 ```

@@ -1,6 +1,2 @@
-lib/
-include/
-bin/
-.env
-pyvenv.cfg
+/venv/
 .vscode
