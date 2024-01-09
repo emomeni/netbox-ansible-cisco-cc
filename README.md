@@ -78,33 +78,46 @@ The four main elements of the integration are as follows:
 
 ## Getting Started with the Ansible Playbooks
 
-1. Clone the Git repo and change into netbox-cisco-catalyst-center directory:
-```
-git clone https://github.com/netboxlabs/netbox-cisco-catalyst-center.git
-cd netbox-cisco-catalyst-center
-```
+1. Clone the Git repo and change into the `netbox-cisco-catalyst-center` directory:
+    ```
+    git clone https://github.com/netboxlabs/netbox-cisco-catalyst-center.git
+    cd netbox-cisco-catalyst-center
+    ```
 2. Create and activate Python 3 virtual environment:
-```
-python3 -m venv ./venv
-source venv/bin/activate
-```
+    ```
+    python3 -m venv ./venv
+    source venv/bin/activate
+    ```
 3. Install required Python packages:
-```
-pip install -r requirements.txt
-```
+    ```
+    pip install -r requirements.txt
+    ```
 4. Set environment variables for the NetBox API token and URL:
-```
-export NETBOX_API=<YOUR_NETBOX_URL> (note - must include http:// or https://) 
-export NETBOX_TOKEN==<YOUR_NETBOX_API_TOKEN>
-```
-6. Run a playbook making sure to specify the NetBox dynamic inventory with the `-i` flag. For example:
-```
-ansible-playbook -i netbox_inv.yml get_device_details.yml
-```
-5. When you have finished working you can deactivate the Python virtual environment:
-```
-deactivate
-```
+    ```
+    export NETBOX_API=<YOUR_NETBOX_URL> (note - must include http:// or https://) 
+    export NETBOX_TOKEN==<YOUR_NETBOX_API_TOKEN>
+    ```
+5. List the devices and host variables retrieved from NetBox using the dynamic inventory: 
+    ```
+    ansible-inventory -i netbox_inv.yml --list
+    ```
+6. Note how the Custom Fields `ccc_device_id` and `cisco_catalyst_center` and their values are retrieved for each device:
+    ```
+    "sw4": {
+        "ansible_host": "10.10.20.178",
+        "custom_fields": {
+            "ccc_device_id": "826bc2f3-bf3f-465b-ad2e-e5701ff7a46c",
+            "cisco_catalyst_center": "sandboxdnac.cisco.com"
+        },
+    ```
+7. Run a playbook making sure to specify the NetBox dynamic inventory with the `-i` flag. For example:
+    ```
+    ansible-playbook -i netbox_inv.yml get_device_details.yml
+    ```
+8. When you have finished working you can deactivate the Python virtual environment:
+    ```
+    deactivate
+    ```
 
 ## References
 - [NetBox Offical Docs](https://docs.netbox.dev/en/stable/)
