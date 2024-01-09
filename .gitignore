@@ -3,3 +3,4 @@ include/
 bin/
 .env
 pyvenv.cfg
+.vscode
