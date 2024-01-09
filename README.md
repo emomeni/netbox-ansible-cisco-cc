@@ -62,28 +62,28 @@ There are four components to the integration:
         ccc_device_id: "{{ hostvars[inventory_hostname].custom_fields['ccc_device_id'] }}"
     ```
 
-## Getting Started With The Ansible Playbook Code
+## Getting Started with the Ansible Playbooks
 
-1. Clone Git repo and change into nornir-netbox-webinar directory
+1. Clone the Git repo and change into netbox-cisco-catalyst-center directory:
 ```
 git clone https://github.com/netboxlabs/netbox-cisco-catalyst-center.git
 cd netbox-cisco-catalyst-center
 ```
-2. Create and activate Python 3 virtual environment
+2. Create and activate Python 3 virtual environment:
 ```
 python3 -m venv .
 source venv/bin/activate
 ```
-3. Install required Python packages
+3. Install required Python packages:
 ```
 pip install -r requirements.txt
 ```
-4. Set environment variables for the NetBox API token and URL
+4. Set environment variables for the NetBox API token and URL:
 ```
 export NETBOX_API=<YOUR_NETBOX_URL> (note - must include http:// or https://) 
 export NETBOX_TOKEN==<YOUR_NETBOX_API_TOKEN>
 ```
-5. When you have finished working you can deactivate the Python virtual environment.
+5. When you have finished working you can deactivate the Python virtual environment:
 ```
 deactivate
 ```
