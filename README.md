@@ -92,7 +92,7 @@ The four main elements of the integration are as follows:
 4. Set environment variables for the NetBox API token and URL:
     ```
     export NETBOX_API=<YOUR_NETBOX_URL> (note - must include http:// or https://) 
-    export NETBOX_TOKEN==<YOUR_NETBOX_API_TOKEN>
+    export NETBOX_TOKEN=<YOUR_NETBOX_API_TOKEN>
     ```
 5. List the devices and host variables retrieved from NetBox using the dynamic inventory: 
     ```
