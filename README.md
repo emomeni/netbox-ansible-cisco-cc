@@ -75,10 +75,10 @@ The four main elements of the integration are as follows:
 
 ## Getting Started with the Ansible Playbooks
 
-1. Clone the Git repo and change into the `netbox-cisco-catalyst-center` directory:
+1. Clone the Git repo and change into the `netbox-ansible-cisco-cc` directory:
     ```
-    git clone https://github.com/netboxlabs/netbox-cisco-catalyst-center.git
-    cd netbox-cisco-catalyst-center
+    git clone https://github.com/netboxlabs/netbox-ansible-cisco-cc.git
+    cd netbox-ansible-cisco-cc
     ```
 2. Create and activate Python 3 virtual environment:
     ```
