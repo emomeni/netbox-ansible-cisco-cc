@@ -1,4 +1,4 @@
-# netbox-cisco-catalyst-center
+# netbox-ansible-cisco-cc
 
 A simple NetBox integration that enables Ansible to automate devices managed by a Cisco Catalyst Center Controller.
 
