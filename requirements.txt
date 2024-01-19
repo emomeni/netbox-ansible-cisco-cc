@@ -8,7 +8,7 @@ dnacentersdk==2.6.10
 fastjsonschema==2.19.1
 future==0.18.3
 idna==3.6
-Jinja2==3.1.2
+Jinja2==3.1.3
 MarkupSafe==2.1.3
 netaddr==0.10.1
 packaging==23.2
